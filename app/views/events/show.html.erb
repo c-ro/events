@@ -1,0 +1,27 @@
+<div>
+
+  <h3>solo view of @event.name</h3>
+
+  <table>
+
+    <tr id="header">
+      <td>id</td>
+      <td>Event Name</td>
+      <td>Location</td>
+      <td>Price</td>
+      <td>Description</td>
+      <td>Starts At</td>
+    </tr>
+    <tr>
+      <td><%= @event.id %></td>
+      <td><%= @event.name %></td>
+      <td><%= @event.location %></td>
+      <td><%= format_price(@event)%></td>
+      <td><%= @event.description %></td>
+      <td><%= @event.starts_at.to_s%></td>
+    </tr>
+  </table>
+
+  <%= link_to "all events", events_path %>
+
+</div>
